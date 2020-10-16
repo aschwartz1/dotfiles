@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/code/dotfiles/bin:$PATH
 eval "$(rbenv init -)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
