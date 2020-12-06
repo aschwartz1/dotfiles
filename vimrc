@@ -6,6 +6,12 @@ set laststatus=2
 " Turn on line numbers by default
 set number
 
+" Tab settings
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
 " Add full file path to existing statusline
 " Note: %F is the full path, %f will show path relative to directory
 " set statusline+=%F
