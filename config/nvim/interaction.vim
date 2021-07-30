@@ -39,14 +39,33 @@
   nnoremap <leader>q :vsplit<cr> :term<cr>
 
   " map escape key to jj -- much faster, comments above b/c of Vim's interpretation of them jumping my cursor
-  imap jj <esc>
+  " imap jj <esc>
 
   " disable line joining b/c of my fingers
-  nnoremap <S-j> <Nop>
+  " nnoremap <S-j> <Nop>
+
+  " keep cursor on middle line when going to next search result
+  nnoremap n nzzzv
+  nnoremap N Nzzzv
+
+  " keep cursor on line & column when joining lines
+  nnoremap J mzJ`z
+
+  " shift lines up/down, match indentation & keep cursor position when in normal mode
+  nnoremap <leader>k mz:m .-2<CR>`z
+  nnoremap <leader>j mz:m .+1<CR>`z
+
+  " shift lines up/down and match indentation when in visual mode
+  vnoremap K :m '<-2<CR>gv=gv
+  vnoremap J :m '>+1<CR>gv=gv
+
+  " shift lines up/down, match indentation & keep cursor position when in insert mode
+  inoremap <C-k> <esc>lmz:m .-2<CR>`zi
+  inoremap <C-j> <esc>lmz:m .+1<CR>`zi
 
   " search navigation
-  nnoremap <Space>] :cn<cr>
   nnoremap <Space>[ :cp<cr>
+  nnoremap <Space>] :cn<cr>
 
   " kill the trailing whitespace
   nnoremap <leader>rtw :%s/\s\+$//e<CR>

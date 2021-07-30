@@ -11,3 +11,5 @@
 [core]
 	excludesfile = /Users/aschwartz/.gitignore
 	editor = vim
+[commit]
+  template = ~/.gitmessage

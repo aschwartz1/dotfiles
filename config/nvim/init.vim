@@ -1,4 +1,5 @@
 let $NVIM = $HOME . "/code/dotfiles/config/nvim"
+let g:polyglot_disabled = ['markdown']
 
 set nocompatible
 set encoding=utf-8  " Fix special character encoding
@@ -79,3 +80,5 @@ source $NVIM/javascript.vim
 source $NVIM/json.vim
 source $NVIM/ruby.vim
 source $NVIM/testing.vim
+
+au BufReadPost,BufNewFile *.md let g:indentLine_enabled = 0

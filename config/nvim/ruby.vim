@@ -14,7 +14,7 @@
 
   " insert a binding.pry under cursor
   " map <Leader>d orequire "pry"<cr>binding.pry<cr><esc>:w<cr>
-  map <Leader>d orequire "pry"; binding.pry<esc><cr>:w<cr>
+  map <Leader>d orequire "pry"; binding.pry<esc>:w<cr>
 
   " bundle
   map <Leader>bb :term bundle install<cr>
