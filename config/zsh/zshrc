@@ -26,6 +26,8 @@ alias installmysql="gem install mysql2 -v '0.5.3' -- --with-ldflags=-L/usr/local
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/code/dotfiles/bin:$PATH
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(rbenv init -)"
 
 ## Ruby
