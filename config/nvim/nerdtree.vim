@@ -5,4 +5,4 @@
 
   let NERDTreeShowHidden=1  " show hidden files
   let NERDTreeQuitOnOpen=1  " Hide NERDTree when opening a file
-  let g:Tlist_WinWidth=60
+:let g:NERDTreeWinSize=60
