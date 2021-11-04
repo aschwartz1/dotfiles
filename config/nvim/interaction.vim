@@ -38,8 +38,8 @@
   nnoremap <leader>h <C-w>s<C-w><C-w>
   nnoremap <leader>q :vsplit<cr> :term<cr>
 
-  " map escape key to jj -- much faster, comments above b/c of Vim's interpretation of them jumping my cursor
-  " imap jj <esc>
+  " map esc to a, can be useful for when I'm using the Atreus keyboard
+  " imap aa <esc>
 
   " disable line joining b/c of my fingers
   " nnoremap <S-j> <Nop>
