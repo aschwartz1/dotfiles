@@ -62,6 +62,8 @@ call plug#begin()
   Plug 'tpope/vim-unimpaired'
   " Multiple cursors plugin for vim/neovim
   Plug 'mg979/vim-visual-multi'
+  " Conquerer of Completion: Make your Vim/Neovim as smart as VSCode.
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
