@@ -21,6 +21,7 @@ alias gcm='git checkout main'
 alias gp='git pull'
 alias fixpsql='rm /usr/local/var/postgres/postmaster.pid'
 alias installmysql="gem install mysql2 -v '0.5.3' -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include"
+alias ffopen="open -a 'Firefox Developer Edition'"
 
 # Customize to your needs...
 export PATH="$HOME/.rbenv/bin:$PATH"
