@@ -28,4 +28,4 @@ set("v", "<S-k>", ":m '<-2<CR>gv=gv", opts) -- up
 set("v", "<S-j>", ":m '>+1<CR>gv=gv", opts) -- down
 
 -- Copy current filepath to the clipboard (a bit hacky, but mine :upside-down-face:)
-nnoremap yp o<c-R>%<esc>:le<cr>dd
+set("n", "yp", 'o<C-R>%<esc>:le<cr>"*dd')
