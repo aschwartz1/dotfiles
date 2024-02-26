@@ -15,6 +15,7 @@ alias dots='cd ~/code/dotfiles'
 alias kts='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
 alias nvimrc='dots && nvim ~/code/dotfiles/config/nvim/init.vim'
 alias tmuxconf='v ~/.tmux.conf'
+alias tmp='cd ~/code/sandbox'
 alias v='nvim'
 alias zshrc='v ~/.zshrc'
 alias gcm='git checkout main'
@@ -22,14 +23,22 @@ alias gp='git pull'
 alias fixpsql='rm /usr/local/var/postgres/postmaster.pid'
 alias installmysql="gem install mysql2 -v '0.5.3' -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include"
 alias ffopen="open -a 'Firefox Developer Edition'"
+alias glon="git log --oneline -n"
+alias glfn="git log --pretty=full -n"
+alias thisisfine="brew uninstall elasticsearch-full && brew untap elastic/tap && brew tap elastic/tap && brew install elastic/tap/elasticsearch-full"
 
 # Customize to your needs...
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/code/dotfiles/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(rbenv init -)"
+
+# test issue w/ hybrid
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 ## Ruby
 alias b='bundle exec'
@@ -43,18 +52,18 @@ alias bwd='bin/webpack-dev-server'
 alias c='bundle exec rails c'
 alias cs='bundle exec rails c --sandbox'
 alias hspec='HEADLESS=true bundle exec rspec'
+alias nrails='bin/rails'
 alias rdb='bundle exec rails db:migrate RAILS_ENV=development && bake db:migrate RAILS_ENV=test'
 alias rist='bundle exec rails routes | grep'
-alias s='bundle exec rails s'
 alias setdevdb='bin/rails db:environment:set RAILS_ENV=development'
 alias settestdb='bin/rails db:environment:set RAILS_ENV=test'
 alias springer='bundle exec spring stop'
 alias springrspec='bundle exec spring binstub rspec'
-alias ss='bundle exec spring server'
 
 ## Git
 alias ga.='git add .'
 alias ga='git add'
+alias gap='git add -p'
 alias gb='git branch'
 alias gbc='git branch --sort=-committerdate'
 alias gbd='git branch -d'
@@ -93,4 +102,26 @@ alias hona='heroku run rails c -a'
 # General
 alias list='ps aux | grep'
 
+# Flamegraph spec runner
+function fspec() {
+  if [ "$1" != "" ]
+  then
+    FPROF=flamegraph bundle exec rspec $1 && open tmp/test_prof/factory-flame.html
+  else
+    echo "ERROR: fspec must be ran with the path to a spec file"
+  fi
+}
+
+# Open most recent screenshot (available in Kairos only?)
+alias capyshot='open tmp/capybara/screenshots/$(ls -t tmp/capybara/screenshots | head -n1)'
+
 ulimit -Sn 10240
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
+# Direnv/devenv stuff
+export DIRENV_LOG_FORMAT=
+eval "$(direnv hook zsh)"

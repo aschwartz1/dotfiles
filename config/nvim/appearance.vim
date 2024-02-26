@@ -53,3 +53,5 @@
   set ignorecase               " case insensitive search
   set smartcase                " case insensitive search
   set incsearch                " incremental search
+
+  hi Folded ctermbg=201

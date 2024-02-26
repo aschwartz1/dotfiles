@@ -41,3 +41,8 @@
 
   " Lightline
   set noshowmode
+
+
+  " Set background & foreground colors for folds
+  highlight Folded guibg=#444444
+  highlight Folded guifg=#c0c0c0

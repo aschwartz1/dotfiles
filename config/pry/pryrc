@@ -1,13 +1,26 @@
 Pry.config.editor = "nvim"
 
-def dfc
-  Detaso::Database.first.connect!
-  Current.client = Client.first
+def lkj
+  Current.organization = Organization.first
 end
 
-if defined?(PryByebug)
-  Pry.commands.alias_command 'c', 'continue'
-  Pry.commands.alias_command 's', 'step'
-  Pry.commands.alias_command 'n', 'next'
-  Pry.commands.alias_command 'f', 'finish'
+def ifm
+  send(:include, FactoryBot::Syntax::Methods)
 end
+
+def dfc
+  # Default debugging setup
+  # Detaso::Database.first.connect!
+  # Current.client = Client.first
+
+  # Imported client data setup
+  database = Detaso::Database.first.tap(&:connect!)
+  Current.client = Client.find_by!(database_key: database.key)
+end
+
+# if defined?(PryByebug)
+#  Pry.commands.alias_command 'c', 'continue'
+#  Pry.commands.alias_command 's', 'step'
+#  Pry.commands.alias_command 'n', 'next'
+#  Pry.commands.alias_command 'f', 'finish'
+# end

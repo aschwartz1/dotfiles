@@ -10,7 +10,11 @@
   set mouse=a                  " allow mouse usage
   set clipboard=unnamed        " set default yank register to machine clipboard
 
-  set nofoldenable             " disable folding
+  set foldmethod=syntax
+  set foldnestmax=10
+  set foldlevel=10
+  set nofoldenable             " disable automaic folding when vim is opened
+
 
   set splitright               " vsplit splits to right side
   set splitbelow               " split splits to bottom
@@ -82,3 +86,7 @@
   if executable("ag")
     let g:ackprg = 'ag --vimgrep'
   end
+
+  " a little trick to pull in the filename and save it to the clipboard
+  nnoremap yp o<c-R>%<esc>:le<cr>dd
+

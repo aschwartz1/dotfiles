@@ -9,4 +9,4 @@
   nmap <silent> <leader>a :TestSuite<CR>
   nmap <silent> <leader>g :TestVisit<CR>
 
-  nmap <silent> <CR> :TestLast<CR>
+  nmap <silent> <leader><CR> :TestLast<CR>

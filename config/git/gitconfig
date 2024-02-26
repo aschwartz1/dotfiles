@@ -13,3 +13,7 @@
 	editor = vim
 [commit]
   template = ~/.gitmessage
+[init]
+	defaultBranch = main
+[push]
+	autosetupremote = false

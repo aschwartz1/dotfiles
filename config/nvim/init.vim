@@ -40,8 +40,6 @@ call plug#begin()
   Plug 'MaxMEllon/vim-jsx-pretty'
   " endwise.vim: wisely add "end" in ruby, endfunction/endif/more in vim script, etc
   " Plug 'tpope/vim-endwise'
-  " Equinusocio's material theme for vim
-  Plug 'chuling/vim-equinusocio-material'
   " fugitive.vim: A Git wrapper so awesome, it should be illegal
   Plug 'tpope/vim-fugitive'
   " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
@@ -56,6 +54,10 @@ call plug#begin()
   Plug 'tpope/vim-surround'
   " Run your tests at the speed of thought
   Plug 'janko/vim-test'
+  " A vim plugin to create your own text objects without pain.
+  Plug 'kana/vim-textobj-user'
+  " Just use iE for changing inside an erb tag, and aE for changing around it (<% and %> included). NOTE: depends on kana/vim-textobj-user
+  Plug 'whatyouhide/vim-textobj-erb'
   " unimpaired.vim: Pairs of handy bracket mappings Plug 'tpope/vim-unimpaired' Seamless navigation between tmux panes and vim splits
   Plug 'christoomey/vim-tmux-navigator'
   " unimpaired.vim: Pairs of handy bracket mappings
@@ -63,10 +65,15 @@ call plug#begin()
   " Multiple cursors plugin for vim/neovim
   Plug 'mg979/vim-visual-multi'
   " Conquerer of Completion: Make your Vim/Neovim as smart as VSCode.
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Speed up folding when in syntax mode
+  Plug 'Konfekt/FastFold'
+  " -v- THEMES -v-
+  " Equinusocio's material theme for vim
+  Plug 'chuling/vim-equinusocio-material'
+  " Plug 'sonph/onehalf', { 'rtp': 'vim' }
+  " -^- THEMES -^-
 call plug#end()
-
 source $NVIM/appearance.vim
 source $NVIM/interaction.vim
 
