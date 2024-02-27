@@ -19,10 +19,6 @@ set("n", "<leader>x", ":close<CR>") -- close current split
 set("n", "<leader>t", ":tabnew<CR>")   -- open a new tab
 set("n", "<leader>w", ":tabclose<CR>") -- close the current tab
 
--- Moving lines, normal mode
-set("n", "<S-k>", ":m-2<CR>", opts)         -- up
-set("n", "<S-j>", ":m+<CR>", opts)          -- down
-
 -- Moving lines, visual mode (I may have up/down mixed up?)
 set("v", "<S-k>", ":m '<-2<CR>gv=gv", opts) -- up
 set("v", "<S-j>", ":m '>+1<CR>gv=gv", opts) -- down

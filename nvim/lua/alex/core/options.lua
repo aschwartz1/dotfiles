@@ -25,6 +25,7 @@ opt.smartcase = true  -- Ignore case when pattern contains lowercase only
 
 -- Appearance
 -- https://neovim.io/doc/user/options.html#'cursorline'
+opt.signcolumn = "yes"   -- Always display the signcolum
 opt.cursorline = true    -- Highlight the text line of the cursor with CursorLine hl-CursorLine.
 -- https://neovim.io/doc/user/options.html#'termguicolors'
 opt.termguicolors = true -- Enables 24-bit RGB color
@@ -40,6 +41,6 @@ opt.sidescrolloff = 6 -- Start scrolling 6 lines from the right
 
 -- Misc
 -- https://neovim.io/doc/user/options.html#'backspace'
-opt.backspace = "indent,eol,start" -- Make backspace function more normally
+opt.backspace = "indent,eol,start"  -- Make backspace function more normally
 opt.clipboard:append("unnamedplus") -- Yank to system clipboard
-opt.iskeyword:append("-") -- Include dashes as part of the word, when traversing with `w`
+opt.iskeyword:append("-")           -- Include dashes as part of the word, when traversing with `w`
