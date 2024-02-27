@@ -16,5 +16,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Add lazy.nvim
--- From the docs, this is: `require("lazy").setup(plugins, opts)`
-require("lazy").setup({})
+-- From the docs, the syntax is: `require("lazy").setup(plugins, opts)`
+require("lazy").setup({ { import = "alex.plugins" } })
