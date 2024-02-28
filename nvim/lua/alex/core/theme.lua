@@ -1,6 +1,3 @@
-local cmd = vim.cmd
-local keymap = vim.keymap
-
 -- Initialize the global variable for the theme mode if it's not set
 if vim.g.current_theme_mode == nil then
   vim.g.current_theme_mode = "dark"
