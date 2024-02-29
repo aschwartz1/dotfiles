@@ -25,3 +25,7 @@ set("v", "<S-j>", ":m '>+1<CR>gv=gv", opts) -- down
 
 -- Copy current filepath to the clipboard (a bit hacky, but mine :upside-down-face:)
 set("n", "yp", 'o<C-R>%<esc>:le<cr>"*dd')
+
+-- Quick-add binding.pry / binding.remote_pry
+set("n", "<leader>d", "obinding.pry<ESC>")
+set("n", "<leader>e", "obinding.remote_pry<ESC>")
