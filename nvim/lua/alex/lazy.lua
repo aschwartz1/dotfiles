@@ -1,4 +1,4 @@
--- Setup lazy as the package manager
+-- Bootstrap lazy as the package manager
 -- https://github.com/folke/lazy.nvim?tab=readme-ov-file#-installation
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -17,4 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Add lazy.nvim
 -- From the docs, the syntax is: `require("lazy").setup(plugins, opts)`
-require("lazy").setup({ { import = "alex.plugins" } })
+require("lazy").setup({ { import = "alex.plugins" } }, {
+  change_detection = { notify = false }
+})
