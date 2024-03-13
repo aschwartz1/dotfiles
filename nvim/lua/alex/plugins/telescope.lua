@@ -35,10 +35,9 @@ return {
         defaults = {
           mappings = {
             i = {
-              -- Note: C-q is the default keymap to send *all* results to the quickfix list
-              ["<C-k>"] = actions.move_selection_previous,                       -- move to previous result, using C-k
-              ["<C-j>"] = actions.move_selection_next,                           -- move to next result, using C-j
-              ["<C-w>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected items to quick fix list & open it
+              ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- Override <C-q> to send selected, not all, to quickfix list; open the quickfix list
+              -- ["<C-h>"] = actions.preview_scrolling_left,                        -- Remap scrolling preview window left
+              -- ["<C-l>"] = actions.preview_scrolling_right,                       -- Remap scrolling preview window right
             },
           },
           file_ignore_patterns = {
