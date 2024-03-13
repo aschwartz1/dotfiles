@@ -15,7 +15,6 @@ return {
           -- https://github.com/nvim-treesitter/nvim-treesitter/issues/6187
           additional_vim_regex_highlighting = true,
         },
-        indent = { enable = true },
       })
     end,
   },
