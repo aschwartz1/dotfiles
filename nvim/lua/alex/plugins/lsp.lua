@@ -12,7 +12,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "tsserver",
-        "ruby_ls",
+        "ruby_lsp",
         "standardrb"
       },
     }
@@ -25,7 +25,7 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.tsserver.setup({})
       lspconfig.standardrb.setup({})
-      lspconfig.ruby_ls.setup({})
+      lspconfig.ruby_lsp.setup({})
       lspconfig.eslint.setup({
         on_attach = function(_, bufnr)
           vim.api.nvim_create_autocmd("BufWritePre", {
