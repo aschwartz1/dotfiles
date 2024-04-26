@@ -22,7 +22,31 @@ return {
           mappings = {
             -- disable fuzzy finder
             -- https://github.com/nvim-neo-tree/neo-tree.nvim/issues/791
-            ["/"] = "noop"
+            ["/"] = "noop",
+            ["a"] = {
+              "add",
+              config = {
+                show_path = "relative" -- "none", "relative", "absolute"
+              }
+            },
+            ["A"] = {
+              "add_directory",
+              config = {
+                show_path = "relative" -- "none", "relative", "absolute"
+              }
+            },
+            ["c"] = {
+              "copy",
+              config = {
+                show_path = "absolute" -- "none", "relative", "absolute"
+              }
+            },
+            ["m"] = {
+              "move",
+              config = {
+                show_path = "absolute" -- "none", "relative", "absolute"
+              }
+            },
           },
         },
       },
