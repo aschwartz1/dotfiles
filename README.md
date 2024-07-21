@@ -8,6 +8,7 @@ _7/21/24 note: Symlinks might be specific to the first machine I setup with this
 - Create symlinks...
 
 ```
+.config/nvim -> /Users/<profile>/code/dotfiles/nvim
 .gitconfig -> /Users/<profile/code/dotfiles/config/git/gitconfig
 .gitignore -> /Users/<profile/code/dotfiles/config/git/gitignore
 .pryrc -> /Users/<profile/code/dotfiles/config/pry/pryrc
